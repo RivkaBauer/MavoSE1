@@ -73,6 +73,11 @@ public class Sphere extends RadialGeometry {
                 '}';
     }
 
+    /**
+     *
+     * @param ray
+     * @return
+     */
     @Override
     public List<GeoPoint> findIntersections(Ray ray) {
         if(ray.getPoint().equals(_center))

@@ -95,7 +95,7 @@ public class Polygon extends Geometry {
 
     /**
      * constructor
-     * @param vertices0
+     * @param vertices
      */
     public Polygon(Point3D... vertices) {
         this(Color.BLACK,new Material(0,0,0),vertices);
@@ -107,6 +107,11 @@ public class Polygon extends Geometry {
         return _plane.get_normal();
     }
 
+    /**
+     *
+     * @param ray
+     * @return
+     */
     @Override
     public List<GeoPoint> findIntersections(Ray ray) {
         Plane plane = new Plane(emission, material, this._vertices.get(0), this._vertices.get(1), this._vertices.get(2));
